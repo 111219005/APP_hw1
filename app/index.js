@@ -1,11 +1,21 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 
 export default function Page() {
   return (
     <View style={styles.container}>
       <View style={styles.main}>
-        <Text style={styles.title}>Hello World</Text>
-        <Text style={styles.subtitle}>This is the first page of your app.</Text>
+        <View style={styles.profileCard}>
+          <View style={styles.profileImage}>
+            <Image source={require("../img/catToBread.jpg")} style={{ width: 250, height: 80 }} />
+          </View>
+          <View style={styles.circleImageContainer}>
+            <Image source={require("../img/cat.jpg")} style={styles.circleImage} />
+          </View>
+          <View style={styles.word}>
+            <Text style={styles.title}>吳函蓁</Text>
+            <Text style={styles.subtitle}>111219005</Text>
+          </View>
+        </View>
       </View>
     </View>
   );
@@ -16,6 +26,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     padding: 24,
+    backgroundColor: "#9E686E",
   },
   main: {
     flex: 1,
@@ -23,12 +34,49 @@ const styles = StyleSheet.create({
     maxWidth: 960,
     marginHorizontal: "auto",
   },
+  profileCard: {
+    width: 350,
+    height: 225,
+    backgroundColor: "#EFE9E1",
+    borderRadius: 10,
+  },
+  profileImage: {
+    width: 350,
+    height:112,
+    paddingTop:10,
+    backgroundColor:"white",
+    alignItems: "center",
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+  },
+  circleImageContainer: {
+    position: "absolute",
+    top: 70,
+    left: "18%",
+    transform: [{ translateX: -50 }],
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    overflow: "hidden",
+    borderWidth: 2,
+    borderColor: "white",
+  },
+  circleImage: {
+    width: "100%",
+    height: "100%",
+  },
+  word: {
+    width: 350,
+    paddingLeft: 15,
+    paddingTop: 34,
+    alignItems: "flex-start",
+  },
   title: {
-    fontSize: 64,
+    fontSize: 32,
     fontWeight: "bold",
   },
   subtitle: {
-    fontSize: 36,
+    fontSize: 16,
     color: "#38434D",
   },
 });

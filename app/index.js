@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     padding: 24,
-    backgroundColor: "#9E686E",
+    backgroundColor: "#d7a45b",
   },
   main: {
     flex: 1,
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   profileCard: {
     width: 350,
     height: 225,
-    backgroundColor: "#EFE9E1",
+    backgroundColor: "#ffedc0",
     borderRadius: 10,
   },
   profileImage: {
@@ -74,9 +74,10 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 32,
     fontWeight: "bold",
+    color: "#201a1a",
   },
   subtitle: {
     fontSize: 16,
-    color: "#38434D",
+    color: "#201a1a",
   },
 });
